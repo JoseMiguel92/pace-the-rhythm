@@ -1,1 +1,1 @@
-# pace-the-rithym
+pace-the-rhythm
