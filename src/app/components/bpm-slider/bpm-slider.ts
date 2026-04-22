@@ -12,6 +12,7 @@ import { BPM_ZONES } from '../../shared/constants/bpm.constants';
   templateUrl: './bpm-slider.html',
   styleUrl: './bpm-slider.css',
 })
+<<<<<<< HEAD
 export class BpmSliderComponent {
   disabled = false;
   bpmMax = 220;
