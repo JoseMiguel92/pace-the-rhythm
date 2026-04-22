@@ -1,1 +1,11 @@
-<p>bpm-slider works!</p>
+<mat-slider
+  class="example-margin"
+  [disabled]="disabled"
+  [max]="bpmMax"
+  [min]="bpmMin"
+  [step]="step"
+  [discrete]="thumbLabel"
+  [showTickMarks]="showTicks"
+>
+  <input matSliderThumb [ngModel]="currentBpm()" (ngModelChange)="bpmChange.emit($event)" #slider />
+</mat-slider>

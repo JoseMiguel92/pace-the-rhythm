@@ -1,1 +1,2 @@
-<p>home works!</p>
+<bpm-slider [currentBpm]="bpm()" (bpmChange)="bpm.set($event)" />
+<track-list [tracks]="tracks()"/>
