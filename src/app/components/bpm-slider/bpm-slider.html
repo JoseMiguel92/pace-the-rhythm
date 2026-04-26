@@ -13,7 +13,7 @@
     {{ bpmZone().label }}
   </div>
 
-  <div class="relative w-full">
+  <div class="relative w-full px-4! mr-4!">
     <mat-slider
       class="w-full!"
       [disabled]="disabled"
@@ -26,7 +26,7 @@
       <input matSliderThumb [ngModel]="currentBpm()" (ngModelChange)="bpmChange.emit($event)" />
     </mat-slider>
 
-    <div class="relative w-full h-6" style="">
+    <div class="relative w-full h-6">
       @for (mark of presetMarks; track mark.value) {
         <div
           class="absolute flex flex-col items-center -translate-x-1/2"
