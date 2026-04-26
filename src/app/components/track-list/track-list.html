@@ -2,11 +2,17 @@
   @for (track of tracks(); track track.id) {
     <mat-list-item role="listitem">
       <div
-        class="mx-auto flex max-w-sm items-center gap-x-4 rounded-xl bg-white p-6 shadow-lg outline outline-black/5 dark:bg-slate-800 dark:shadow-none dark:-outline-offset-1 dark:outline-white/10"
+        class="mx-auto flex max-w-sm items-center gap-x-4 rounded-xl bg-white p-6 shadow-lg outline outline-black/5 mb-4
+        dark:bg-slate-800 dark:shadow-none dark:-outline-offset-1 dark:outline-white/10"
       >
-        <div>
-          <div class="text-xl font-medium text-black dark:text-white">{{ track.songName }}</div>
-          <p class="text-gray-500 dark:text-gray-400">{{ track.artists[0].name }}</p>
+        <div class="flex w-full items-start justify-between">
+          <div>
+            <div class="text-xl font-medium text-black dark:text-white">{{ track.trackTitle }}</div>
+            <p class="text-gray-500 dark:text-gray-400">{{ track.artists | artistList }}</p>
+          </div>
+          <span class="text-gray-500 dark:text-gray-400 text-sm shrink-0 ml-4">
+            {{ track.durationMs | msDuration }}
+          </span>
         </div>
       </div>
     </mat-list-item>

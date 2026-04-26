@@ -1,7 +1,7 @@
-import { Artist } from "./artist";
+import { Artist } from "./artist.model";
 
 export interface TrackItem{
-  id: number;
-  songName: string;
+  id: string;
+  trackTitle: string;
   artists: Artist[];
 }

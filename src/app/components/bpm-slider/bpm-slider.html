@@ -1,3 +1,4 @@
+<div>
 <mat-slider
   class="example-margin"
   [disabled]="disabled"
@@ -9,3 +10,8 @@
 >
   <input matSliderThumb [ngModel]="currentBpm()" (ngModelChange)="bpmChange.emit($event)" #slider />
 </mat-slider>
+</div>
+<div>
+  <p>{{currentBpm()}}</p>
+</div>
+
