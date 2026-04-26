@@ -16,7 +16,7 @@ import { PaceComponent } from "../../components/pace/pace";
 export class HomeComponent {
   private trackService = inject(TrackService);
 
-  bpm = signal<number>(141);
+  bpm = signal<number>(160);
   tracks = toSignal(
     toObservable(this.bpm).pipe(
       debounceTime(500),

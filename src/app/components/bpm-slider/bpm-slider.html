@@ -1,17 +1,41 @@
-<div>
-<mat-slider
-  class="example-margin"
-  [disabled]="disabled"
-  [max]="bpmMax"
-  [min]="bpmMin"
-  [step]="step"
-  [discrete]="thumbLabel"
-  [showTickMarks]="showTicks"
->
-  <input matSliderThumb [ngModel]="currentBpm()" (ngModelChange)="bpmChange.emit($event)" #slider />
-</mat-slider>
-</div>
-<div>
-  <p>{{currentBpm()}}</p>
-</div>
+<div class="flex flex-col items-center gap-2 w-full">
+  <div class="flex flex-col items-center">
+    <span class="text-5xl font-bold tabular-nums tracking-tight">
+      {{ currentBpm() }}
+    </span>
+    <span class="text-xs uppercase tracking-widest text-gray-400 mt-1">BPM</span>
+  </div>
 
+  <div
+    class="text-sm font-semibold px-3 py-1 rounded-full transition-all duration-300"
+    [ngClass]="bpmZone().cssClass"
+  >
+    {{ bpmZone().label }}
+  </div>
+
+  <div class="relative w-full">
+    <mat-slider
+      class="w-full!"
+      [disabled]="disabled"
+      [max]="bpmMax"
+      [min]="bpmMin"
+      [step]="step"
+      [discrete]="thumbLabel"
+      [showTickMarks]="showTicks"
+    >
+      <input matSliderThumb [ngModel]="currentBpm()" (ngModelChange)="bpmChange.emit($event)" />
+    </mat-slider>
+
+    <div class="relative w-full h-6" style="">
+      @for (mark of presetMarks; track mark.value) {
+        <div
+          class="absolute flex flex-col items-center -translate-x-1/2"
+          [style.left.%]="toPercent(mark.value)"
+        >
+          <div class="w-px h-2 bg-gray-400"></div>
+          <span class="text-[10px] text-gray-400 mt-0.5">{{ mark.label }}</span>
+        </div>
+      }
+    </div>
+  </div>
+</div>
