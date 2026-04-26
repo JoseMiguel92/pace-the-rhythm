@@ -1,5 +1,42 @@
-<input type="number" [ngModel]="minutes()" (ngModelChange)="minutes.set($event)"
-  (focus)="onFocus()" (blur)="onBlur()" min="0" />
-<span>:</span>
-<input type="number" [ngModel]="seconds()" (ngModelChange)="seconds.set($event)"
-  (focus)="onFocus()" (blur)="onBlur()" min="0" max="59" />
+<div class="flex flex-col items-center gap-2 w-full">
+  <div
+    class="inline-flex items-end gap-1 rounded-2xl border border-white/10 bg-neutral-900 px-5 py-4 shadow-xl transition-all duration-300 ease-out focus-within:border-emerald-500/40 focus-within:ring-4 focus-within:ring-emerald-500/10"
+  >
+    <div class="flex flex-col items-center gap-1.5">
+      <input
+        type="number"
+        [ngModel]="minutes()"
+        (ngModelChange)="minutes.set($event)"
+        (focus)="onFocus()"
+        (blur)="onBlur()"
+        min="0"
+        placeholder="00"
+        class="w-16 bg-transparent text-center font-mono text-5xl font-semibold text-white outline-none tabular-nums caret-emerald-400 placeholder:text-neutral-700 [appearance:textfield] [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none transition-colors duration-150 focus:text-emerald-300"
+      />
+      <span class="text-[10px] font-semibold uppercase tracking-[0.2em] text-neutral-600">
+        min
+      </span>
+    </div>
+
+    <span class="mb-7 select-none font-mono text-4xl font-bold leading-none text-neutral-600">
+      :
+    </span>
+
+    <div class="flex flex-col items-center gap-1.5">
+      <input
+        type="number"
+        [ngModel]="seconds()"
+        (ngModelChange)="seconds.set($event)"
+        (focus)="onFocus()"
+        (blur)="onBlur()"
+        min="0"
+        max="59"
+        placeholder="00"
+        class="w-16 bg-transparent text-center font-mono text-5xl font-semibold text-white outline-none tabular-nums caret-emerald-400 placeholder:text-neutral-700 [appearance:textfield] [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none transition-colors duration-150 focus:text-emerald-300"
+      />
+      <span class="text-[10px] font-semibold uppercase tracking-[0.2em] text-neutral-600">
+        seg
+      </span>
+    </div>
+  </div>
+</div>
