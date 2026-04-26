@@ -1,4 +1,5 @@
 export interface Artist{
-  id: number;
+  id: string;
   name: string;
+  spotifyLink: string;
 }

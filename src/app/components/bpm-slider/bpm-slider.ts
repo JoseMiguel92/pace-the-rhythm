@@ -8,10 +8,10 @@ import { FormsModule } from '@angular/forms';
   templateUrl: './bpm-slider.html',
   styleUrl: './bpm-slider.css',
 })
-export class BpmSlider {
+export class BpmSliderComponent {
   disabled = false;
   bpmMax = 250;
-  bpmMin = 0;
+  bpmMin = 141;
   showTicks = false;
   step = 1;
   thumbLabel = false;

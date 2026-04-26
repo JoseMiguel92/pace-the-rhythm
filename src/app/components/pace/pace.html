@@ -1,0 +1,5 @@
+<input type="number" [ngModel]="minutes()" (ngModelChange)="minutes.set($event)"
+  (focus)="onFocus()" (blur)="onBlur()" min="0" />
+<span>:</span>
+<input type="number" [ngModel]="seconds()" (ngModelChange)="seconds.set($event)"
+  (focus)="onFocus()" (blur)="onBlur()" min="0" max="59" />

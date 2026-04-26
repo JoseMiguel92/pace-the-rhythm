@@ -1,0 +1,12 @@
+:host ::ng-deep .mat-mdc-list-item-single-line {
+  height: auto !important;
+  padding: 0 !important;
+}
+
+:host ::ng-deep .mdc-list-item__content {
+  display: block !important;
+}
+
+:host ::ng-deep .mat-mdc-list-item-interactive::before {
+  border-radius: inherit !important;
+}
