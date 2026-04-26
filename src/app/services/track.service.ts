@@ -9,7 +9,6 @@ import { RecommendationMapper } from './mapper/recommendation.mapper';
 @Injectable({ providedIn: 'root' })
 export class TrackService {
   private http = inject(HttpClient);
-<<<<<<< HEAD
   private baseUrl: string = 'https://api.reccobeats.com/v1';
 
   getByBpm(bpm: number): Observable<TrackItem[]> {
