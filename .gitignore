@@ -237,5 +237,9 @@ e2e/*.map
 
 # System Files
 .DS_Store/
+<<<<<<< HEAD
 
 .vercel/
+=======
+.vercel
+>>>>>>> feature/create-landing-page
