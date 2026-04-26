@@ -1,0 +1,5 @@
+::ng-deep .mdc-slider__thumb-knob {
+  border-radius: 50% !important;
+  width: 20px !important;
+  height: 20px !important;
+}
