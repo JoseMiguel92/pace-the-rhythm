@@ -1,3 +1,47 @@
-/* You can add global styles to this file, and also import other style files */
-
 @import 'tailwindcss';
+
+@theme {
+  --card-radius: var(--radius-2xl);
+}
+
+.mat-mdc-list-item-single-line {
+  height: auto !important;
+  padding: 0 !important;
+}
+
+.mdc-list-item__content {
+  display: block !important;
+}
+
+.mat-mdc-list-item-interactive::before {
+  border-radius: inherit !important;
+}
+
+.mdc-slider__thumb-knob {
+  border-radius: 50% !important;
+  width: 20px !important;
+  height: 20px !important;
+}
+
+@utility no-spinners {
+  appearance: textfield;
+
+  &::-webkit-inner-spin-button,
+  &::-webkit-outer-spin-button {
+    appearance: none;
+  }
+}
+
+@utility metric-value {
+  font-size: var(--text-5xl);
+  font-weight: var(--font-weight-bold);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: var(--tracking-tight);
+}
+
+@utility field-label {
+  font-size: 10px;
+  font-weight: var(--font-weight-semibold);
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}

@@ -1,9 +1,11 @@
-<div class="flex flex-col items-center gap-2 w-full">
+<div
+  class="flex flex-col items-center gap-2 w-full rounded-2xl border border-gray-200 bg-white px-5 py-4 shadow-lg dark:border-white/10 dark:bg-neutral-900 dark:shadow-xl"
+>
   <div class="flex flex-col items-center">
-    <span class="text-5xl font-bold tabular-nums tracking-tight">
+    <span class="metric-value text-gray-900 dark:text-white">
       {{ currentBpm() }}
     </span>
-    <span class="text-xs uppercase tracking-widest text-gray-400 mt-1">BPM</span>
+    <span class="field-label text-gray-400 dark:text-neutral-600 mt-1">BPM</span>
   </div>
 
   <div
@@ -32,8 +34,10 @@
           class="absolute flex flex-col items-center -translate-x-1/2"
           [style.left.%]="toPercent(mark.value)"
         >
-          <div class="w-px h-2 bg-gray-400"></div>
-          <span class="text-[10px] text-gray-400 mt-0.5">{{ mark.label }}</span>
+          <div class="w-px h-2 bg-gray-300 dark:bg-neutral-600"></div>
+          <span class="text-[10px] text-gray-400 dark:text-neutral-500 mt-0.5">{{
+            mark.label
+          }}</span>
         </div>
       }
     </div>
