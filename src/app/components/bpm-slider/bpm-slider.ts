@@ -3,10 +3,11 @@ import { FormsModule } from '@angular/forms';
 import { MatSliderModule } from '@angular/material/slider';
 import { BPM_ZONES, BpmZone } from './bpm-zone';
 import { NgClass } from '@angular/common';
+import { DecimalPipe } from '@angular/common';
 
 @Component({
   selector: 'bpm-slider',
-  imports: [MatSliderModule, FormsModule, NgClass],
+  imports: [MatSliderModule, FormsModule, NgClass,DecimalPipe],
   templateUrl: './bpm-slider.html',
   styleUrl: './bpm-slider.css',
 })
