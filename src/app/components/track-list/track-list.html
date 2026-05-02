@@ -17,6 +17,7 @@
   <mat-list role="list">
     @for (track of tracks(); track track.id) {
       <mat-list-item role="listitem">
+        <a href="{{track.href}}" target="_blank">
         <div
           class="flex w-full items-center gap-x-4 rounded-2xl border border-gray-200 bg-white p-5 shadow-sm mb-3 dark:border-white/10 dark:bg-neutral-900 dark:shadow-none"
         >
@@ -32,6 +33,7 @@
             </span>
           </div>
         </div>
+        </a>
       </mat-list-item>
     } @empty {
       <div
