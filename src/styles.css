@@ -23,6 +23,40 @@
   height: 20px !important;
 }
 
+.slider-muted {
+  .mdc-slider__track--active_fill {
+    background-color: var(--color-black) !important;
+    opacity: 1 !important;
+    color:var(--color-black) !important;
+  }
+  .mdc-slider__track--inactive {
+    background-color: var(--color-black) !important;
+    opacity: 1 !important;
+    color:var(--color-black) !important;
+  }
+  .mdc-slider__thumb-knob {
+    background-color: var(--color-black) !important;
+    border-color: var(--color-black) !important;
+  }
+
+  @variant dark {
+    .mdc-slider__track--active_fill {
+      background-color: var(--color-white) !important;
+      opacity: 1 !important;
+      color:var(--color-white) !important;
+    }
+    .mdc-slider__track--inactive {
+      background-color: var(--color-white) !important;
+      opacity: 1 !important;
+      color:var(--color-white) !important;
+    }
+    .mdc-slider__thumb-knob {
+      background-color: var(--color-white) !important;
+      border-color: var(--color-white) !important;
+    }
+  }
+}
+
 @utility no-spinners {
   appearance: textfield;
 

@@ -2,6 +2,11 @@
   <div class="w-full max-w-lg flex flex-col gap-6">
     <bpm-slider [currentBpm]="bpm()" (bpmChange)="bpm.set($event)" />
     <pace [currentBpm]="bpm()" (bpmChange)="bpm.set($event)" />
-    <track-list [tracks]="tracks()" />
+    <track-list [isLoading]="homeView().isLoading" [tracks]="homeView().tracks" />
+    <div class="flex items-center justify-center">
+      <p><span class="text-gray-400 dark:text-neutral-500 mt-0.5"
+        >The Pace Rhythm - Make with ❤︎ by⁠ <a href="https://josemiguel92.github.io/">josemiguel92.github.io</a></span
+      ></p>
+    </div>
   </div>
 </div>

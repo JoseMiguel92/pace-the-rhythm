@@ -17,7 +17,7 @@
 
   <div class="relative w-full px-4! mr-4!">
     <mat-slider
-      class="w-full!"
+      class="w-full! slider-muted"
       [disabled]="disabled"
       [max]="bpmMax"
       [min]="bpmMin"
@@ -25,7 +25,7 @@
       [discrete]="thumbLabel"
       [showTickMarks]="showTicks"
     >
-      <input matSliderThumb [ngModel]="currentBpm()" (ngModelChange)="bpmChange.emit($event)" />
+      <input matSliderThumb [ngModel]="currentBpm()" (ngModelChange)="bpmChange.emit($event)"/>
     </mat-slider>
 
     <div class="relative w-full h-6">

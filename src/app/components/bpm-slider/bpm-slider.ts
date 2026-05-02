@@ -1,9 +1,10 @@
 import { Component, computed, input, output } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { MatSliderModule } from '@angular/material/slider';
-import { BPM_ZONES, BpmZone } from './bpm-zone';
+import { BpmZone } from '../../model/bpm-zone.model';
 import { NgClass } from '@angular/common';
 import { DecimalPipe } from '@angular/common';
+import { BPM_ZONES } from '../../shared/constants/bpm.constants';
 
 @Component({
   selector: 'bpm-slider',
@@ -30,7 +31,7 @@ export class BpmSliderComponent {
 
   bpmZone = computed<BpmZone>(() => {
     const bpm = this.currentBpm();
-    return (BPM_ZONES.find((z) => bpm <= z.max) ?? BPM_ZONES.at(-1)!).zone;
+    return (BPM_ZONES.find((value) => bpm <= value.max) ?? BPM_ZONES.at(-1)!).zone;
   });
 
   toPercent(value: number): number {

@@ -11,6 +11,7 @@ import { ArtistListPipe } from "../../shared/pipes/artistList.pipe";
   styleUrl: './track-list.css',
 })
 export class TrackListComponent {
+  isLoading = input<boolean>(false);
   tracks = input.required<TrackItem[]>();
 
   constructor() {}
