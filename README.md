@@ -2,8 +2,23 @@
 
 > Calcula tu BPM ideal según tu ritmo de carrera y descubre música que encaja exactamente con tu cadencia.
 
-![pace the rhythm](/docs/images/readme_pacetherhythm.jpg)
-**Demo:** [pace-the-rhythm.vercel.app](https://pace-the-rhythm.vercel.app/)
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./docs/images/readme_pacetherhythm_dark.jpg">
+    <source media="(prefers-color-scheme: light)" srcset="./docs/images/readme_pacetherhythm_light.jpg">
+    <img src="logo-light.png" width="100%" alt="Logo">
+  </picture>
+</p>
+
+🔗 **Demo:**  [pace-the-rhythm.vercel.app](https://pace-the-rhythm.vercel.app/)
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./docs/images/demo_pacetherhythm.jpg">
+    <source media="(prefers-color-scheme: light)" srcset="./docs/images/demo_pacetherhythm.jpg">
+    <img src="logo-light.png" width="300" alt="Logo">
+  </picture>
+</p>
 
 ## Descripción
 
